@@ -1,4 +1,6 @@
-﻿namespace eserciziFunzioni
+﻿using System.Runtime.CompilerServices;
+
+namespace eserciziFunzioni
 {
     internal class Program
     {
@@ -28,16 +30,28 @@
             }
             return s;
         }
-        static string versioneS(int n)
+        static bool controlloA(bool n)
         {
+            string a = "Marco", b = "Giacomo", c = "Luca", d = "Alessio";
+            if (n = a || b || c || d)
+            {
+
+
+
+            }
+
+           return n;
         }
 
         static void Main(string[] args)
         {
             int ris = sommaN();
             Console.WriteLine(ris);
+            Console.WriteLine("dammi un nome:");
+            bool nome = Convert.ToBoolean(Console.ReadLine());
+            controlloA(nome);
 
         }
-        fdkjshgytgfvdasfwedabs
+        
     }
 }
