@@ -30,28 +30,34 @@ namespace eserciziFunzioni
             }
             return s;
         }
-        static bool ControlloA (string n)
+        static bool ControlloA (string n, int p)
         {
             string a = "Marco", b = "Giacomo", c = "Luca", d = "Alessio";
             
-            if (n == a || n== b || n == c || n == d)
+            if (n == a || n== b || n == c || n == d )
             {
+                if (p == 1234)
+                {
+                    return true;
+                }
                 
-                return true;
                
             }
 
             return false;
         }
       
+        
         static void Main(string[] args)
         {
             int ris = sommaN();
             Console.WriteLine(ris);
             Console.WriteLine("dammi un nome:");
             string n= Console.ReadLine();
-            ControlloA(n);
-            if (ControlloA(n) == true) {
+            Console.WriteLine("dammi la password(4 cifre):");
+            int p = Convert.ToInt32(Console.ReadLine());
+            ControlloA(n, p);
+            if (ControlloA(n, p) == true) {
                 Console.WriteLine("sei entrato");
             }
             else
