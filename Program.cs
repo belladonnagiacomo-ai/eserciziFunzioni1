@@ -6,7 +6,7 @@ namespace eserciziFunzioni
     {
         static bool verificaN(int n)
         {
-
+            hdfgwhjgadshbvejhgsdncer
             int r = n % 5;
             if (r == 0)
             {
@@ -33,7 +33,7 @@ namespace eserciziFunzioni
         static bool controlloA (string  n)
         {
             string a = "Marco", b = "Giacomo", c = "Luca", d = "Alessio";
-            if (n = a || b || c || d)
+            if (n == a || n== b || n == c || n == d)
             {
                 return true;
             }
@@ -60,7 +60,7 @@ namespace eserciziFunzioni
             if (controlloA(nome) == true) {
 
                 int p = 0;
-                while (passwordS(p) == false)
+                while (passwordS(p) == true)
                 {
                     Console.WriteLine("dimmi la password per entrare(sono 4 numeri):");
                     p = Convert.ToInt32(Console.ReadLine());
