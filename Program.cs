@@ -6,7 +6,7 @@ namespace eserciziFunzioni
     {
         static bool verificaN(int n)
         {
-            hdfgwhjgadshbvejhgsdncer
+           
             int r = n % 5;
             if (r == 0)
             {
@@ -30,54 +30,36 @@ namespace eserciziFunzioni
             }
             return s;
         }
-        static bool controlloA (string  n)
+        static bool ControlloA (string n)
         {
             string a = "Marco", b = "Giacomo", c = "Luca", d = "Alessio";
+            
             if (n == a || n== b || n == c || n == d)
             {
+                
                 return true;
-            }
-
-           return false;
-        }
-        static bool passwordS(int p)
-        {
-            p = 1234;
-            if (p == 1234)
-            {
-                return true;
+               
             }
 
             return false;
         }
+      
         static void Main(string[] args)
         {
             int ris = sommaN();
             Console.WriteLine(ris);
             Console.WriteLine("dammi un nome:");
-            string nome = Console.ReadLine();
-            controlloA(nome);
-            if (controlloA(nome) == true) {
-
-                int p = 0;
-                while (passwordS(p) == true)
-                {
-                    Console.WriteLine("dimmi la password per entrare(sono 4 numeri):");
-                    p = Convert.ToInt32(Console.ReadLine());
-                    passwordS(p);
-
-                    if (passwordS(p) == true)
-                    {
-                        Console.WriteLine("sei entrato");
-                    }
-                    else
-                    {
-                        Console.WriteLine("non sei entrato, riprova");
-                    }
-                }
-
-            
+            string n= Console.ReadLine();
+            ControlloA(n);
+            if (ControlloA(n) == true) {
+                Console.WriteLine("sei entrato");
             }
+            else
+            {
+                Console.WriteLine("non sei entrato");
+            }
+
+           
 
 
         }
