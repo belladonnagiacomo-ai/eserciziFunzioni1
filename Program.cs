@@ -46,8 +46,29 @@ namespace eserciziFunzioni
 
             return false;
         }
-      
-        
+       
+        static double calcolaS(double sconto, string c, double prezzo)
+        {
+            prezzo = 0;
+           if (c == "elettronica")
+           {
+                if(prezzo > 400)
+                {
+                    sconto = (prezzo * 15) / 100;
+                    double prezzoF = prezzo - sconto;
+                } 
+
+           }
+           else if (c == "alimentari")
+           {
+                Console.WriteLine("non c e uno sconto sui alimentari");
+                
+           }
+           else if (c == "abbigliamento")
+
+
+                return sconto;
+        }
         static void Main(string[] args)
         {
             int ris = sommaN();
@@ -64,7 +85,10 @@ namespace eserciziFunzioni
             {
                 Console.WriteLine("non sei entrato");
             }
-
+            Console.WriteLine("Quale categoria di prodotto vuoi scegliere(elettronica, alimentari, abbigliamento):");
+            string c = Console.ReadLine();
+            Console.WriteLine("dimmi il prezzo del prodotto scelto:");
+            double prezzo = Convert.ToDouble(Console.ReadLine());
            
 
 
