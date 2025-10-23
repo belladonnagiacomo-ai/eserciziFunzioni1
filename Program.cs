@@ -47,24 +47,28 @@ namespace eserciziFunzioni
             return false;
         }
        
-        static double calcolaS(double sconto, string c, double prezzo)
+        static double calcolaS( string c, double prezzo)
         {
-            prezzo = 0;
-           if (c == "elettronica")
-           {
-                if(prezzo > 400)
+            
+            double sconto=0;
+            if (c == "elettronica")
+            {
+                if (prezzo > 400)
                 {
                     sconto = (prezzo * 15) / 100;
                     double prezzoF = prezzo - sconto;
-                } 
+                }
 
-           }
-           else if (c == "alimentari")
-           {
-                Console.WriteLine("non c e uno sconto sui alimentari");
-                
-           }
-           else if (c == "abbigliamento")
+            }
+            else if (c == "abbigliamento")
+            {
+                if(prezzo >= 350)
+                {
+                    sconto = (prezzo * 25) / 100;
+                    double prezzoF = prezzo - sconto;
+                }
+
+            }
 
 
                 return sconto;
@@ -77,7 +81,7 @@ namespace eserciziFunzioni
             string n= Console.ReadLine();
             Console.WriteLine("dammi la password(4 cifre):");
             int p = Convert.ToInt32(Console.ReadLine());
-            ControlloA(n, p);
+            
             if (ControlloA(n, p) == true) {
                 Console.WriteLine("sei entrato");
             }
@@ -89,7 +93,15 @@ namespace eserciziFunzioni
             string c = Console.ReadLine();
             Console.WriteLine("dimmi il prezzo del prodotto scelto:");
             double prezzo = Convert.ToDouble(Console.ReadLine());
-           
+           if (c == "alimentari")
+            {
+                Console.WriteLine("non c e uno sconto sui alimentari");
+            }
+           else if(c == "elettronica")
+            {
+                
+                Console.WriteLine("lo sconto e di:" + calcolaS( c, prezzo));
+            }
 
 
         }
